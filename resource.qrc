@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>style/login_dialog.qss</file>
+        <file>style/main_window.qss</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>res/Borrowing_Management.svg</file>
+        <file>res/borrowing_record.svg</file>
+        <file>res/library_management.svg</file>
+        <file>res/logo.ico</file>
+        <file>res/user_management.svg</file>
+    </qresource>
+</RCC>

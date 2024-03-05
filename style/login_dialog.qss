@@ -1,0 +1,63 @@
+CLoginDialog {
+    background-color: white;
+}
+
+QPushButton {
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    padding: 4px 20px 2px 20px;
+    border-radius: 4px;
+}
+
+QPushButton#btnLogin,
+#btnRegister {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+
+QPushButton#btnLogin:hover,
+#btnRegister:hover {
+    color: #fff;
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+}
+
+QPushButton#btnLogin:pressed,
+#btnRegister:pressed {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+QPushButton#btnFindPassword {
+    border-color: transparent;
+    color: #409eff;
+    background: transparent;
+}
+
+QPushButton#btnFindPassword:hover {
+    color: #66b1ff;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+QPushButton#btnFindPassword:pressed {
+    border-color: transparent;
+    color: #409eff;
+    background: transparent;
+}
+
+QLineEdit {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 25px;
+    padding: 0 15px;
+    width: 100%;
+}

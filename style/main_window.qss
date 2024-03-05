@@ -1,0 +1,24 @@
+QWidget#widget {
+    background-color: #545c64;
+    border: 0px;
+}
+
+QToolButton {
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(84, 92, 100);
+    width: 120px;
+    height: 55px;
+    border: 0px solid;
+    font-size: 14px;
+    font-family: 黑体;
+}
+
+QToolButton:hover {
+    background-color: rgb(67, 74, 80);
+}
+
+QToolButton:checked {
+    color: rgb(255, 208, 75);
+    background-color: rgb(67, 74, 80);
+}
