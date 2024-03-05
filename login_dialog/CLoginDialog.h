@@ -1,10 +1,14 @@
 #ifndef CLOGINDIALOG_H
 #define CLOGINDIALOG_H
 
+#if defined(_WIN32)
 #ifdef LOGIN_DIALOG_EXPORT
 #define EXPORT_LOGIN_DIALOG __declspec(dllexport)
 #else
 #define EXPORT_LOGIN_DIALOG __declspec(dllimport)
+#endif
+#else
+#define EXPORT_LOGIN_DIALOG
 #endif
 
 #include <QDialog>
