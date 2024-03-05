@@ -2,3 +2,5 @@
 build
 CMakePresets.json
 .clang-format
+CMakeLists.txt.user
+my_lib.session.sql

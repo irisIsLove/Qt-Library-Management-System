@@ -17,6 +17,10 @@ namespace Ui {
 class CMainWindow;
 }
 
+QT_BEGIN_NAMESPACE
+class QButtonGroup;
+QT_END_NAMESPACE
+
 class EXPORT_MAIN_WINDOW CMainWindow : public QWidget {
   Q_OBJECT
 
@@ -24,10 +28,15 @@ public:
   explicit CMainWindow(QWidget* parent = nullptr);
   ~CMainWindow();
 
+private slots:
+  void slotBtnClicked(int id, bool checked);
+
 private:
   void setIcon();
+  void initBtnGroup();
 
   Ui::CMainWindow* ui;
+  QButtonGroup* mBtnGroup;
 };
 
 #endif // CMAINWINDOW_H

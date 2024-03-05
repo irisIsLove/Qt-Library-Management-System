@@ -13,6 +13,32 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#widget {
+    background-color: #545c64;
+    border: 0px;
+}
+
+QToolButton {
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(84, 92, 100);
+    width: 120px;
+    height: 55px;
+    border: 0px solid;
+    font-size: 14px;
+    font-family: 黑体;
+}
+
+QToolButton:hover {
+    background-color: rgb(67, 74, 80);
+}
+
+QToolButton:checked {
+    color: rgb(255, 208, 75);
+    background-color: rgb(67, 74, 80);
+}</string>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
     <number>0</number>
@@ -61,9 +87,6 @@
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextBesideIcon</enum>
         </property>
-        <attribute name="buttonGroup">
-         <string notr="true">buttonGroup</string>
-        </attribute>
        </widget>
       </item>
       <item>
@@ -77,9 +100,6 @@
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextBesideIcon</enum>
         </property>
-        <attribute name="buttonGroup">
-         <string notr="true">buttonGroup</string>
-        </attribute>
        </widget>
       </item>
       <item>
@@ -93,9 +113,6 @@
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextBesideIcon</enum>
         </property>
-        <attribute name="buttonGroup">
-         <string notr="true">buttonGroup</string>
-        </attribute>
        </widget>
       </item>
       <item>
@@ -109,9 +126,6 @@
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextBesideIcon</enum>
         </property>
-        <attribute name="buttonGroup">
-         <string notr="true">buttonGroup</string>
-        </attribute>
        </widget>
       </item>
       <item>
@@ -143,7 +157,4 @@
  </widget>
  <resources/>
  <connections/>
- <buttongroups>
-  <buttongroup name="buttonGroup"/>
- </buttongroups>
 </ui>

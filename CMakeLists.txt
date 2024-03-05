@@ -31,4 +31,5 @@ target_link_libraries(my_library PRIVATE
     global_setting
     login_dialog
     main_window
+    database_manager
 )
