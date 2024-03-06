@@ -29,11 +29,11 @@ void CLoginDialog::on_btnLogin_clicked() {
 }
 
 void CLoginDialog::on_btnRegister_clicked() {
-  CRegisterDialog d(E_FIND_OR_REG::E_REGISTE);
+  CRegisterDialog d(E_FIND_OR_REG::E_REGISTE, this);
   d.exec();
 }
 
 void CLoginDialog::on_btnFindPassword_clicked() {
-  CRegisterDialog d(E_FIND_OR_REG::E_FIND);
+  CRegisterDialog d(E_FIND_OR_REG::E_FIND, this);
   d.exec();
 }
