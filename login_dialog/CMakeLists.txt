@@ -1,7 +1,7 @@
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
-set(SOURCE_FILES CLoginDialog.cpp)
-set(HEADER_FILES CLoginDialog.h)
-set(UI_FILES CLoginDialog.ui)
+set(SOURCE_FILES CLoginDialog.cpp CRegisterDialog.cpp)
+set(HEADER_FILES CLoginDialog.h CRegisterDialog.h)
+set(UI_FILES CLoginDialog.ui CRegisterDialog.ui)
 
 include_directories(${CMAKE_SOURCE_DIR})
 

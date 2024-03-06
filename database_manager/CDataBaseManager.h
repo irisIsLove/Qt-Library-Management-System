@@ -18,6 +18,8 @@ public:
   static CDataBaseManager* getInstance();
   bool login(const QString& qsUsername, const QString& qsPwd);
   bool registe(const QString& qsUsername, const QString& qsPwd);
+  bool findUser(const QString& qsUsername);
+  bool modifyPwd(const QString& qsUsername, const QString& qsPwd);
 
 private:
   CDataBaseManager();

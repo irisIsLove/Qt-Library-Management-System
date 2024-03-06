@@ -65,5 +65,28 @@ bool CDataBaseManager::login(const QString& qsUsername, const QString& qsPwd) {
 
 bool CDataBaseManager::registe(const QString& qsUsername,
                                const QString& qsPwd) {
-  return true;
+  QSqlQuery sqlRegiste(mDb);
+  QString qsSql =
+      QString("insert into users (username, password) values ('%1', '%2');")
+          .arg(qsUsername)
+          .arg(qsPwd);
+  return sqlRegiste.exec(qsSql);
+}
+
+bool CDataBaseManager::findUser(const QString& qsUsername) {
+  QSqlQuery sqlFind(mDb);
+  QString qsSql =
+      QString("select * from users where username = '%1'").arg(qsUsername);
+  sqlFind.exec(qsSql);
+  return sqlFind.next();
+}
+
+bool CDataBaseManager::modifyPwd(const QString& qsUsername,
+                                 const QString& qsPwd) {
+  QSqlQuery sqlModifyPwd(mDb);
+  QString qsSql =
+      QString("update users set password = '%1' where username = '%2'")
+          .arg(qsPwd)
+          .arg(qsUsername);
+  return sqlModifyPwd.exec(qsSql);
 }

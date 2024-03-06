@@ -1,5 +1,6 @@
 #include "CLoginDialog.h"
 #include "database_manager/CDataBaseManager.h"
+#include "login_dialog/CRegisterDialog.h"
 #include "ui_CLoginDialog.h"
 
 #include <QIcon>
@@ -23,14 +24,16 @@ void CLoginDialog::on_btnLogin_clicked() {
   if (CDataBaseManager::getInstance()->login(qsUsername, qsPwd)) {
     accept();
   } else {
-    QMessageBox::information(this, "", "密码错误");
+    QMessageBox::information(this, "", u8"密码错误！");
   }
 }
 
 void CLoginDialog::on_btnRegister_clicked() {
-  QMessageBox::information(this, "", "注册成功");
+  CRegisterDialog d(E_FIND_OR_REG::E_REGISTE);
+  d.exec();
 }
 
 void CLoginDialog::on_btnFindPassword_clicked() {
-  QMessageBox::information(this, "", "找回密码");
+  CRegisterDialog d(E_FIND_OR_REG::E_FIND);
+  d.exec();
 }

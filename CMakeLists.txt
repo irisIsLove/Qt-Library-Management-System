@@ -11,6 +11,10 @@ find_package(Qt5 COMPONENTS Core Widgets Sql REQUIRED)
 
 add_library(global_setting INTERFACE ${RESOURCE_FILES})
 
+if(MSVC)
+    add_compile_options("/source-charset:utf-8")
+endif()
+
 set(CMAKE_AUTOUIC TRUE)
 set(CMAKE_AUTOMOC TRUE)
 set(CMAKE_AUTORCC TRUE)
