@@ -29,7 +29,7 @@ add_subdirectory(login_dialog)
 
 add_subdirectory(main_window)
 
-add_executable(my_library main.cpp logo.rc ${RESOURCE_FILES})
+add_executable(my_library const.h main.cpp logo.rc ${RESOURCE_FILES})
 
 target_link_libraries(my_library PRIVATE
     global_setting

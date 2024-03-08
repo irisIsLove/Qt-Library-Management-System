@@ -1,16 +1,10 @@
 #include "CMainWindow.h"
+#include "const.h"
 #include "ui_CMainWindow.h"
 
 #include <QButtonGroup>
 #include <QIcon>
 #include <QtDebug>
-
-enum class ButtonID : int {
-  ID_USER_MANAGE,
-  ID_BOOK_MANAGE,
-  ID_BOOK_BORROW,
-  ID_BORROW_RECORD,
-};
 
 CMainWindow::CMainWindow(QWidget* parent)
     : QWidget(parent), ui(new Ui::CMainWindow),
@@ -29,7 +23,6 @@ void CMainWindow::setIcon() {
   setWindowIcon(QIcon(":/icon/res/logo.ico"));
   ui->btnBookManage->setIcon(QIcon(":/icon/res/library_management.svg"));
   ui->btnBookBorrow->setIcon(QIcon(":/icon/res/Borrowing_Management.svg"));
-  ui->btnBorrowRecord->setIcon(QIcon(":/icon/res/borrowing_record.svg"));
   ui->btnUserManage->setIcon(QIcon(":/icon/res/user_management.svg"));
 }
 
@@ -38,8 +31,6 @@ void CMainWindow::initBtnGroup() {
                        static_cast<int>(ButtonID::ID_BOOK_MANAGE));
   mBtnGroup->addButton(ui->btnBookBorrow,
                        static_cast<int>(ButtonID::ID_BOOK_BORROW));
-  mBtnGroup->addButton(ui->btnBorrowRecord,
-                       static_cast<int>(ButtonID::ID_BORROW_RECORD));
   mBtnGroup->addButton(ui->btnUserManage,
                        static_cast<int>(ButtonID::ID_USER_MANAGE));
 }
@@ -47,13 +38,5 @@ void CMainWindow::initBtnGroup() {
 void CMainWindow::slotBtnClicked(int id, bool checked) {
   if (!checked)
     return;
-
-  auto btnID = static_cast<ButtonID>(id);
-  switch (btnID) {
-  case ButtonID::ID_USER_MANAGE:
-  case ButtonID::ID_BOOK_MANAGE:
-  case ButtonID::ID_BOOK_BORROW:
-  case ButtonID::ID_BORROW_RECORD:
-    break;
-  }
+  ui->stackedWidget->setCurrentIndex(id);
 }

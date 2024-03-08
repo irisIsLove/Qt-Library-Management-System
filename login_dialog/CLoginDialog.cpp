@@ -21,6 +21,14 @@ void CLoginDialog::on_btnLogin_clicked() {
   QString qsUsername = ui->leUsername->text();
   QString qsPwd = ui->lePassword->text();
 
+  if (qsUsername.isEmpty()) {
+    QMessageBox::information(this, "", u8"账号为空！");
+    return;
+  } else if (qsPwd.isEmpty()) {
+    QMessageBox::information(this, "", u8"密码为空！");
+    return;
+  }
+
   if (CDataBaseManager::getInstance()->login(qsUsername, qsPwd)) {
     accept();
   } else {
