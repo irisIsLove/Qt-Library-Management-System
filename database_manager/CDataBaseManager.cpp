@@ -3,6 +3,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QSqlTableModel>
 #include <QtDebug>
 
 CDataBaseManager* CDataBaseManager::instance = nullptr;
@@ -89,4 +90,24 @@ bool CDataBaseManager::modifyPwd(const QString& qsUsername,
           .arg(qsPwd)
           .arg(qsUsername);
   return sqlModifyPwd.exec(qsSql);
+}
+
+QSqlTableModel* CDataBaseManager::getModel(ButtonID id, QObject* parent) {
+  QSqlTableModel* pModel = new QSqlTableModel(parent, mDb);
+
+  switch (id) {
+  case ButtonID::ID_USER_MANAGE:
+    pModel->setTable("user_info");
+    break;
+  case ButtonID::ID_BOOK_MANAGE:
+    pModel->setTable("books");
+    break;
+  case ButtonID::ID_BOOK_BORROW:
+    pModel->setTable("borrowing_records");
+    break;
+  }
+
+  pModel->select();
+
+  return pModel;
 }

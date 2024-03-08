@@ -19,6 +19,7 @@ class CMainWindow;
 
 QT_BEGIN_NAMESPACE
 class QButtonGroup;
+class QSqlTableModel;
 QT_END_NAMESPACE
 
 class EXPORT_MAIN_WINDOW CMainWindow : public QWidget {
@@ -37,6 +38,8 @@ private:
 
   Ui::CMainWindow* ui;
   QButtonGroup* mBtnGroup;
+  QSqlTableModel* mBookModel;
+  QSqlTableModel* mBorrowModel;
 };
 
 #endif // CMAINWINDOW_H

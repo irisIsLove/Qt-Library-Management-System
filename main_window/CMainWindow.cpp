@@ -1,14 +1,23 @@
 #include "CMainWindow.h"
+#include "CUserWidget.h"
 #include "const.h"
+#include "database_manager/CDataBaseManager.h"
 #include "ui_CMainWindow.h"
 
 #include <QButtonGroup>
 #include <QIcon>
+#include <QSqlTableModel>
 #include <QtDebug>
+#include <qmessagebox.h>
+#include <qnamespace.h>
 
 CMainWindow::CMainWindow(QWidget* parent)
     : QWidget(parent), ui(new Ui::CMainWindow),
-      mBtnGroup(new QButtonGroup(this)) {
+      mBtnGroup(new QButtonGroup(this)),
+      mBookModel(CDataBaseManager::getInstance()->getModel(
+          ButtonID::ID_BOOK_MANAGE, this)),
+      mBorrowModel(CDataBaseManager::getInstance()->getModel(
+          ButtonID::ID_BOOK_BORROW, this)) {
   ui->setupUi(this);
   setWindowTitle("My Library");
   setIcon();

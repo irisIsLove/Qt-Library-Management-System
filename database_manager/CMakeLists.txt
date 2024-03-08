@@ -4,6 +4,8 @@ set(HEADER_FILES CDataBaseManager.h)
 
 find_package(Qt5 COMPONENTS Sql REQUIRED)
 
+include_directories(${CMAKE_SOURCE_DIR})
+
 add_library(database_manager SHARED ${SOURCE_FILES} ${HEADER_FILES})
 
 set_target_properties(database_manager PROPERTIES DEFINE_SYMBOL "DATABASE_MANAGER_EXPORT")
