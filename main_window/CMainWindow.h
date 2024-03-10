@@ -35,10 +35,12 @@ private slots:
 private:
   void setIcon();
   void initBtnGroup();
+  void initStackedWidget();
 
   Ui::CMainWindow* ui;
   QButtonGroup* mBtnGroup;
   QSqlTableModel* mBookModel;
+  QSqlTableModel* mUserModel;
   QSqlTableModel* mBorrowModel;
 };
 

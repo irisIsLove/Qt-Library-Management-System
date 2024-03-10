@@ -37,7 +37,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="leSeach_2"/>
+      <widget class="QLineEdit" name="leSeach">
+       <property name="placeholderText">
+        <string>请输入编号或书名</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btnAddBook">

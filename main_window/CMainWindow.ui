@@ -133,6 +133,12 @@ QToolButton:checked {
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
+     <property name="minimumSize">
+      <size>
+       <width>600</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">QWidget {
     background-color: white;

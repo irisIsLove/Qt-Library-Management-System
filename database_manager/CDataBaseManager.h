@@ -28,6 +28,10 @@ public:
   bool findUser(const QString& qsUsername);
   bool modifyPwd(const QString& qsUsername, const QString& qsPwd);
 
+  void borrowBook(const QString& qsUserId, const QString& qsBookId,
+                  QString& qsErr);
+  void returnBook(const QString& qsRecordId, QString& qsErr);
+
   QSqlTableModel* getModel(ButtonID id, QObject* parent);
 
 private:

@@ -37,19 +37,23 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="leSeach_3"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btnAddBook_2">
-       <property name="text">
-        <string>添加图书</string>
+      <widget class="QLineEdit" name="leSeach">
+       <property name="placeholderText">
+        <string>请输入用户名或书名</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btnDeleteBook_2">
+      <widget class="QPushButton" name="btnBorrowBook">
        <property name="text">
-        <string>删除图书</string>
+        <string>借取图书</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnReturnBook">
+       <property name="text">
+        <string>归还图书</string>
        </property>
       </widget>
      </item>
@@ -58,12 +62,9 @@
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Fixed</enum>
-       </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>90</width>
+         <width>40</width>
          <height>20</height>
         </size>
        </property>

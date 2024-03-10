@@ -37,7 +37,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="leSeach"/>
+      <widget class="QLineEdit" name="leSeach">
+       <property name="placeholderText">
+        <string>请输入id、姓名或电话</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btnAddUser">

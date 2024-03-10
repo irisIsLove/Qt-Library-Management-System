@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CBorrowDialog</class>
+ <widget class="QDialog" name="CBorrowDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>238</width>
+    <height>133</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>借阅信息</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    color: #fff;
+    padding: 4px 20px 2px 20px;
+    border-radius: 4px;
+	background-color: #409eff;
+    border-color: #409eff;
+}
+
+QPushButton:hover {
+    color: #fff;
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+}
+
+QPushButton:pressed {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+QLineEdit {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 25px;
+    padding: 0 15px;
+    width: 100%;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>黑体</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    color: #fff;
+    padding: 4px 20px 2px 20px;
+    border-radius: 4px;
+	background-color: #409eff;
+    border-color: #409eff;
+}
+
+QPushButton:hover {
+    color: #fff;
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+}
+
+QPushButton:pressed {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+QLineEdit {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 25px;
+    padding: 0 15px;
+    width: 100%;
+}</string>
+     </property>
+     <property name="text">
+      <string>请输入借阅信息</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>用户id：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="leUserId"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>编号  ：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="leBookId"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnOk">
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

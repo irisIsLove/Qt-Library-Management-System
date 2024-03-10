@@ -18,6 +18,10 @@ public:
   explicit CUserWidget(QWidget* parent = nullptr);
   ~CUserWidget();
 
+  void setModel(QSqlTableModel* pModel);
+
+  void initTable();
+
 private slots:
   void on_btnAddUser_clicked();
 
@@ -28,8 +32,6 @@ private slots:
   void on_leSeach_textChanged(const QString& qsSearch);
 
 private:
-  void initTable();
-
   Ui::CUserWidget* ui;
   QSqlTableModel* mUserModel;
 };
