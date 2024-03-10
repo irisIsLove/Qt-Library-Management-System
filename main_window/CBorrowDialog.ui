@@ -10,6 +10,11 @@
     <height>133</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>黑体</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>借阅信息</string>
   </property>
@@ -106,6 +111,11 @@ QLineEdit {
          <height>0</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+        </font>
+       </property>
        <property name="text">
         <string>用户id：</string>
        </property>
@@ -126,8 +136,13 @@ QLineEdit {
          <height>0</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+        </font>
+       </property>
        <property name="text">
-        <string>编号  ：</string>
+        <string>编  号：</string>
        </property>
       </widget>
      </item>
