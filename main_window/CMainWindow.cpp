@@ -48,26 +48,26 @@ void CMainWindow::initBtnGroup() {
 
 void CMainWindow::initStackedWidget() {
   {
-    static_cast<CUserWidget*>(
+    dynamic_cast<CUserWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_USER_MANAGE)))
         ->setModel(mUserModel);
-    static_cast<CUserWidget*>(
+    dynamic_cast<CUserWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_USER_MANAGE)))
         ->initTable();
   }
   {
-    static_cast<CBookWidget*>(
+    dynamic_cast<CBookWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_BOOK_MANAGE)))
         ->setModel(mBookModel);
-    static_cast<CBookWidget*>(
+    dynamic_cast<CBookWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_BOOK_MANAGE)))
         ->initTable();
   }
   {
-    static_cast<CBorrowWidget*>(
+    dynamic_cast<CBorrowWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_BOOK_BORROW)))
         ->setModel(mBorrowModel);
-    static_cast<CBorrowWidget*>(
+    dynamic_cast<CBorrowWidget*>(
         ui->stackedWidget->widget(static_cast<int>(ButtonID::ID_BOOK_BORROW)))
         ->initTable();
   }
@@ -77,7 +77,7 @@ void CMainWindow::slotBtnClicked(int id, bool checked) {
   if (!checked)
     return;
   ui->stackedWidget->setCurrentIndex(id);
-  ButtonID ID = static_cast<ButtonID>(id);
+  auto ID = static_cast<ButtonID>(id);
   switch (ID) {
   case ButtonID::ID_USER_MANAGE:
     mUserModel->select();
