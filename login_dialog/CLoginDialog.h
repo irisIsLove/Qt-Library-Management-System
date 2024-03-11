@@ -17,7 +17,7 @@ namespace Ui {
 class CLoginDialog;
 }
 
-class EXPORT_LOGIN_DIALOG CLoginDialog : public QDialog {
+class CLoginDialog : public QDialog {
   Q_OBJECT
 
 public:

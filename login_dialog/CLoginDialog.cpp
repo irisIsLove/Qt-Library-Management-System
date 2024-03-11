@@ -1,6 +1,6 @@
 #include "CLoginDialog.h"
+#include "CRegisterDialog.h"
 #include "database_manager/CDataBaseManager.h"
-#include "login_dialog/CRegisterDialog.h"
 #include "ui_CLoginDialog.h"
 
 #include <QIcon>

@@ -22,7 +22,7 @@ class QButtonGroup;
 class QSqlTableModel;
 QT_END_NAMESPACE
 
-class EXPORT_MAIN_WINDOW CMainWindow : public QWidget {
+class CMainWindow : public QWidget {
   Q_OBJECT
 
 public:

@@ -41,12 +41,12 @@ CDataBaseManager::CDataBaseManager()
 
   ret = sqlCreateTable.exec(
       "CREATE TABLE IF NOT EXISTS borrow_record (record_id VARCHAR(255) NOT "
-      "NULL PRIMARY KEY AUTOINCREMENT, user_id INTEGER NOT NULL, book_id INT "
+      "NULL PRIMARY KEY, user_id INTEGER NOT NULL, book_id INT "
       "NOT NULL, borrow_date DATE NOT NULL, return_date DATE, Foreign Key "
       "(user_id) REFERENCES user_info (user_id), Foreign Key (book_id) "
       "REFERENCES books (book_id))");
   if (!ret) {
-    qDebug() << "table borrowing_records init failed!";
+    qDebug() << "table borrow_record init failed!";
   }
 }
 
