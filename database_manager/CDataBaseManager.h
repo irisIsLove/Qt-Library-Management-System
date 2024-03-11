@@ -12,6 +12,10 @@ QT_END_NAMESPACE
 
 class CDataBaseManager {
 public:
+  CDataBaseManager(const CDataBaseManager&) = delete;
+  CDataBaseManager& operator=(const CDataBaseManager&) = delete;
+  CDataBaseManager(CDataBaseManager&&) = delete;
+  CDataBaseManager& operator=(CDataBaseManager&&) = delete;
   static CDataBaseManager* getInstance();
   bool login(const QString& qsUsername, const QString& qsPwd);
   bool registe(const QString& qsUsername, const QString& qsPwd);
@@ -27,10 +31,6 @@ public:
 private:
   CDataBaseManager();
   ~CDataBaseManager();
-  CDataBaseManager(const CDataBaseManager&) = delete;
-  CDataBaseManager& operator=(const CDataBaseManager&) = delete;
-  CDataBaseManager(CDataBaseManager&&) = delete;
-  CDataBaseManager& operator=(CDataBaseManager&&) = delete;
 
   QSqlDatabase mDb;
   static CDataBaseManager* instance;

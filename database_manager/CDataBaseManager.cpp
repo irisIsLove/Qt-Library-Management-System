@@ -37,6 +37,8 @@ CDataBaseManager::CDataBaseManager()
       "REFERENCES books (book_id))");
 }
 
+CDataBaseManager::~CDataBaseManager() { mDb.close(); }
+
 CDataBaseManager* CDataBaseManager::getInstance() {
   if (nullptr == instance) {
     instance = new CDataBaseManager();

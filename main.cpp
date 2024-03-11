@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 
   if (dlLogin.exec() == QDialog::Accepted) {
     wdMain.show();
-    return app.exec();
+    return QApplication::exec();
   }
   return 0;
 }
