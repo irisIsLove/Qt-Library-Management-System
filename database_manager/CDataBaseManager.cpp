@@ -6,7 +6,6 @@
 #include <QSqlQuery>
 #include <QSqlRelationalTableModel>
 #include <QSqlTableModel>
-#include <QtDebug>
 
 CDataBaseManager* CDataBaseManager::instance = nullptr;
 
@@ -19,25 +18,16 @@ CDataBaseManager::CDataBaseManager()
   bool ret = sqlCreateTable.exec(
       "CREATE TABLE IF NOT EXISTS users (username VARCHAR(255) NOT "
       "NULL,password VARCHAR(255) NOT NULL, PRIMARY KEY(username)) ");
-  if (!ret) {
-    qDebug() << "table user init failed!";
-  }
 
   ret = sqlCreateTable.exec(
       "CREATE TABLE IF NOT EXISTS user_info (user_id INTEGER NOT NULL PRIMARY "
       "KEY AUTOINCREMENT, name VARCHAR(225) NOT NULL, phone_number "
       "VARCHAR(255) NOT NULL UNIQUE, age INT NOT NULL, address VARCHAR(225) "
       "NOT NULL)");
-  if (!ret) {
-    qDebug() << "table user_info init failed!";
-  }
 
   ret = sqlCreateTable.exec(
       "CREATE TABLE IF NOT EXISTS books (book_id INT AUTO_INCREMENT PRIMARY "
       "KEY,title VARCHAR(255) NOT NULL,quantity INT NOT NULL)");
-  if (!ret) {
-    qDebug() << "table books init failed!";
-  }
 
   ret = sqlCreateTable.exec(
       "CREATE TABLE IF NOT EXISTS borrow_record (record_id VARCHAR(255) NOT "
@@ -45,9 +35,6 @@ CDataBaseManager::CDataBaseManager()
       "NOT NULL, borrow_date DATE NOT NULL, return_date DATE, Foreign Key "
       "(user_id) REFERENCES user_info (user_id), Foreign Key (book_id) "
       "REFERENCES books (book_id))");
-  if (!ret) {
-    qDebug() << "table borrow_record init failed!";
-  }
 }
 
 CDataBaseManager* CDataBaseManager::getInstance() {

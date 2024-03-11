@@ -1,16 +1,6 @@
 #ifndef CDATABASEMANAGER_H
 #define CDATABASEMANAGER_H
 
-#if defined(_WIN32)
-#ifdef DATABASE_MANAGER_EXPORT
-#define EXPORT_DATABASE_MANAGER __declspec(dllexport)
-#else
-#define EXPORT_DATABASE_MANAGER __declspec(dllimport)
-#endif
-#else
-#define EXPORT_DATABASE_MANAGER
-#endif
-
 #include "const.h"
 
 #include <QSqlDatabase>

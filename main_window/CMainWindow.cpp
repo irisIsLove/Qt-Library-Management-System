@@ -9,7 +9,6 @@
 #include <QButtonGroup>
 #include <QIcon>
 #include <QSqlTableModel>
-#include <QtDebug>
 
 CMainWindow::CMainWindow(QWidget* parent)
     : QWidget(parent), ui(new Ui::CMainWindow),
