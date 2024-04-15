@@ -1,0 +1,3 @@
+- 系统环境：windows（msvc）
+- 环境安装：vcpkg->Qt5<br> ------------官网下载 sqlite3<br> ------------官网下载 cmake
+- 编译方法：通过 vscode 或者 VS 打开项目后，点击生成及运行即可
